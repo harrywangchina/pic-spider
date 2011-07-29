@@ -118,14 +118,7 @@ public class Main {
 	 * @return
 	 */
 	private static String getPostUrl(Element element){
-		String baseURI = element.baseUri();
-		String basePath = baseURI.substring(0,baseURI.lastIndexOf("/"));
-		String href = element.attr(Config.getPostUrlAttr());
-		if( href.startsWith("http://") ){
-			return href;
-		}
-		String absURL =  basePath + "/" + href;
-		return absURL;
+		return element.attr(Config.getPostUrlAttr());
 	}
 	
 	/**

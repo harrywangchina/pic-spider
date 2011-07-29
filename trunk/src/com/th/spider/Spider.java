@@ -68,10 +68,7 @@ public class Spider {
 	 */
 	private String getImageSrc(Element element){
 		String src = element.attr(Config.getImgUrlAttr());
-		if( src.startsWith("http://") ){
-			return src;
-		}
-		return Config.getWebBase() + src;
+		return src;
 	}
 
 	public static void main(String[] args) throws Exception {
